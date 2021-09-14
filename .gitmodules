@@ -1,0 +1,3 @@
+[submodule "attack_range"]
+	path = attack_range
+	url = https://github.com/kirtankhatana-crest/attack_range.git

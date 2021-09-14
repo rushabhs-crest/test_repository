@@ -1,0 +1,44 @@
+2021-09-14 10:43:30,733 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 10:43:30,733 - INFO - attack_range - running test: ../../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 10:43:44,105 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 10:43:44,106 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 10:43:44,117 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 10:54:03,681 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 10:54:03,682 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 10:54:06,375 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:28:32,050 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:28:32,051 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:28:35,949 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:30:47,819 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:30:47,819 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:30:51,459 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:31:49,287 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:31:49,288 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:31:52,933 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:32:28,582 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:32:28,583 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:32:32,076 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:34:55,980 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:34:55,981 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:35:46,534 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:36:46,552 - INFO - attack_range - Detection execution started with instance: 10.224.113.62, rest_port: 52786, attack_range_password: Chang3d!
+2021-09-14 11:36:51,531 - ERROR - attack_range - test failed for detection: AWS CreateLoginProfile
+2021-09-14 11:36:51,531 - INFO - attack_range - result for detection search `cloudtrail` eventName = CreateLoginProfile | rename requestParameters.userName as new_login_profile | table src_ip eventName new_login_profile userIdentity.userName  | join new_login_profile src_ip [| search `cloudtrail` eventName = ConsoleLogin | rename userIdentity.userName  as new_login_profile | stats count values(eventName) min(_time) as firstTime max(_time) as lastTime by eventSource aws_account_id errorCode userAgent eventID awsRegion userIdentity.principalId user_arn new_login_profile src_ip | `security_content_ctime(firstTime)` | `security_content_ctime(lastTime)`] | `aws_createloginprofile_filter`: {'diskUsage': '143360', 'runDuration': '0.645', 'detection_name': 'AWS CreateLoginProfile', 'detection_file': 'cloud/aws_createloginprofile.yml', 'scanCount': '0', 'error': True}
+2021-09-14 11:36:51,532 - INFO - attack_range - testing completed.
+2021-09-14 11:40:04,383 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:40:04,383 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:40:50,418 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:41:50,434 - INFO - attack_range - Detection execution started with instance: 10.224.113.62, rest_port: 52786, attack_range_password: Chang3d!
+2021-09-14 11:41:56,054 - INFO - attack_range - test successful for detection: AWS CreateLoginProfile
+2021-09-14 11:41:56,054 - INFO - attack_range - result for detection search `cloudtrail` eventName = CreateLoginProfile | rename requestParameters.userName as new_login_profile | table src_ip eventName new_login_profile userIdentity.userName  | join new_login_profile src_ip [| search `cloudtrail` eventName = ConsoleLogin | rename userIdentity.userName  as new_login_profile | stats count values(eventName) min(_time) as firstTime max(_time) as lastTime by eventSource aws_account_id errorCode userAgent eventID awsRegion userIdentity.principalId user_arn new_login_profile src_ip | `security_content_ctime(firstTime)` | `security_content_ctime(lastTime)`] | `aws_createloginprofile_filter`: {'diskUsage': '151552', 'runDuration': '1.35', 'detection_name': 'AWS CreateLoginProfile', 'detection_file': 'cloud/aws_createloginprofile.yml', 'scanCount': '37', 'error': False}
+2021-09-14 11:41:56,055 - INFO - attack_range - testing completed.
+2021-09-14 11:48:26,896 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:48:26,897 - INFO - attack_range - running test: ../security_content/tests/cloud/abnormally_high_cloud_instances_destroyed.test.yml
+2021-09-14 11:49:16,474 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:50:51,810 - INFO - attack_range - INIT - attack_range v1
+2021-09-14 11:50:51,810 - INFO - attack_range - running test: ../security_content/tests/cloud/aws_createloginprofile.test.yml
+2021-09-14 11:51:39,746 - INFO - attack_range - sleeping for 60 seconds to wait for indexing to occur
+2021-09-14 11:52:39,705 - INFO - attack_range - Detection execution started with instance: 10.224.113.62, rest_port: 52786, attack_range_password: Chang3d!
+2021-09-14 11:52:44,725 - INFO - attack_range - test successful for detection: AWS CreateLoginProfile
+2021-09-14 11:52:44,725 - INFO - attack_range - result for detection search `cloudtrail` eventName = CreateLoginProfile | rename requestParameters.userName as new_login_profile | table src_ip eventName new_login_profile userIdentity.userName  | join new_login_profile src_ip [| search `cloudtrail` eventName = ConsoleLogin | rename userIdentity.userName  as new_login_profile | stats count values(eventName) min(_time) as firstTime max(_time) as lastTime by eventSource aws_account_id errorCode userAgent eventID awsRegion userIdentity.principalId user_arn new_login_profile src_ip | `security_content_ctime(firstTime)` | `security_content_ctime(lastTime)`] | `aws_createloginprofile_filter`: {'diskUsage': '155648', 'runDuration': '0.775', 'detection_name': 'AWS CreateLoginProfile', 'detection_file': 'cloud/aws_createloginprofile.yml', 'scanCount': '74', 'error': False}
+2021-09-14 11:52:44,726 - INFO - attack_range - testing completed.
